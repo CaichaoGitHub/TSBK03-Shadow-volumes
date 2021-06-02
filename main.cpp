@@ -149,8 +149,8 @@ void init()
 
 	// Create geometry for rendering
 	// -----------------------------
-	//object = MeshCreator::createBox(0.3f, 0.3f, 0.2f);
-	object = MeshCreator::readOBJ("meshes/torus_thingy.obj");
+	object = MeshCreator::createBox(0.3f, 0.3f, 0.2f);
+	//object = MeshCreator::readOBJ("meshes/torus_thingy.obj");
 	object2 = MeshCreator::createBox(0.3f, 01.0f, 0.2f);
 	lamp = MeshCreator::createSphere(0.1f, 10);
 
@@ -170,11 +170,11 @@ void init()
 
 	// Load and compile shaders
 	// ------------------------
-	ambientShader.create("shaders/ambientShader.vert", "shaders/ambientShader.frag");
-	objShader.create("shaders/diffuseShader.vert", "shaders/diffuseShader.frag");
-	lampShader.create("shaders/lamp.vert", "shaders/lamp.frag");
-	geomShader.create("shaders/geomShader.vert", "shaders/geomShader.frag", "shaders/geomShader.geom");
-	shadowVolumeShader.create("shaders/shadowVolume.vert", "shaders/shadowVolume.frag", "shaders/shadowVolume.geom");
+	ambientShader.create("../shaders/ambientShader.vert", "../shaders/ambientShader.frag");
+	objShader.create("../shaders/diffuseShader.vert", "../shaders/diffuseShader.frag");
+	lampShader.create("../shaders/lamp.vert", "../shaders/lamp.frag");
+	geomShader.create("../shaders/geomShader.vert", "../shaders/geomShader.frag", "../shaders/geomShader.geom");
+	shadowVolumeShader.create("../shaders/shadowVolume.vert", "../shaders/shadowVolume.frag", "../shaders/shadowVolume.geom");
 }
 
 // Display function - draws and renders!
